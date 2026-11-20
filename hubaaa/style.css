@@ -1,0 +1,1118 @@
+
+/* ==============================
+   HUBA NEPAL - MAIN STYLESHEET
+================================ */
+
+:root {
+    --black: #111111;
+    --white: #ffffff;
+    --grey: #777777;
+    --light-grey: #f5f5f5;
+    --border: #e8e8e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+/* ==============================
+   ANNOUNCEMENT BAR
+================================ */
+
+.announcement-bar {
+    width: 100%;
+    min-height: 30px;
+    padding: 7px 12px;
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+/* ==============================
+   HEADER
+================================ */
+
+.header {
+    height: 82px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0 5%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.header-left a {
+    font-size: 12px;
+}
+.menu-button {
+    border: none;
+    background: transparent;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.logo,
+.footer-logo {
+    font-size: 39px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    text-align: center;
+    line-height: 1;
+}
+
+.header-right a {
+    font-size: 23px;
+    transition: opacity 0.2s ease;
+}
+
+.header-right a:hover {
+    opacity: 0.5;
+}
+
+/* ==============================
+   NAVIGATION
+================================ */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 27px;
+    padding: 16px 20px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.navigation a {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background: var(--black);
+    transition: width 0.25s ease;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+/* ==============================
+   HERO BANNER
+================================ */
+
+.hero {
+    min-height: 620px;
+    height: 78vh;
+    max-height: 850px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 70px 20px;
+    color: var(--white);
+    background: #777777;
+    overflow: hidden;
+}
+
+/*
+   Replace the image source in HTML with
+   the actual HUBA hero banner image.
+*/
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Dark overlay for text readability */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.62),
+        rgba(0, 0, 0, 0.05) 75%
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow,
+.hero-subtitle {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.hero-content > p:not(.hero-subtitle) {
+    font-size: 13px;
+    margin: 0 auto 25px;
+    max-width: 470px;
+}
+
+
+/* Left heading */
+.pre-fall-heading h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    white-space: wrap;
+    width:50%;
+    align-items: start;
+    text-align: left;
+}
+
+/* Right description */
+.pre-fall-content {
+    padding-top: 0;
+    align-items: end;
+    text-align: right;
+    width: 100%;
+}
+
+.pre-fall-content p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 2px;
+    align-items: end;
+}
+
+/* Collection button */
+.collection-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+    min-height: 56px;
+    padding: 0 19px;
+    border: 1px solid #111111;
+    border-radius: 13px;
+    color: #111111;
+    background: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.collection-button:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* ==============================
+   BUTTONS
+================================ */
+
+.shop-button,
+.outline-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45px;
+    padding: 13px 26px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.shop-button {
+  
+    border: 1px solid  white;
+    border-radius: 10px;
+}
+
+.shop-button:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+.outline-button {
+    background: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.outline-button:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* ==============================
+   COLLECTION SECTIONS
+================================ */
+
+.collection-section {
+    padding: 75px 5%;
+    text-align: center;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 38px;
+    text-align: center;
+
+
+}
+
+.section-heading h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    
+}
+
+.section-heading > p:not(.eyebrow) {
+    color: var(--grey);
+    font-size: 13px;
+    margin: 0 auto 16px;
+    max-width: 570px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--black);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   PRODUCT GRID
+================================ */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    text-align: left;
+    margin-bottom: 38px;
+}
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.product-card a {
+    display: block;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: var(--light-grey);
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.035);
+}
+
+.product-card h3 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 13px;
+}
+
+.product-card .price {
+    margin-top: 5px;
+    color: var(--black);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* ==============================
+   FULL-WIDTH IMAGE BANNERS
+================================ */
+
+.image-banner {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 65px 20px;
+    background-color: #777777;
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.02)
+    );
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 700px;
+}
+
+.banner-content h2 {
+    font-size: clamp(28px, 4.5vw, 53px);
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.banner-content p:not(.eyebrow) {
+    font-size: 13px;
+    margin-bottom: 23px;
+}
+
+/* These are temporary banner backgrounds.
+   Replace them with the original HUBA images. */
+
+.simulation-banner {
+    background-image: url("https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=2000&q=85");
+}
+
+.streetwear-banner {
+    background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2000&q=85");
+}
+
+.kids-banner {
+    background-image: url("https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=2000&q=85");
+}
+
+.winter-banner {
+    background-image: url("https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=2000&q=85");
+}
+
+/* ==============================
+   FEATURE CARDS
+================================ */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    padding: 30px 5%;
+}
+
+.feature-card {
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+    background: var(--light-grey);
+    color: var(--white);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.feature-card:hover img {
+    transform: scale(1.04);
+}
+
+.feature-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.6),
+        transparent 70%
+    );
+}
+
+.feature-content {
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    right: 25px;
+    z-index: 1;
+}
+
+.feature-content h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.feature-content span {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   ACCESSORIES
+================================ */
+
+.accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accessory-card {
+    display: block;
+}
+
+.accessory-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--light-grey);
+    margin-bottom: 15px;
+    transition: opacity 0.25s ease;
+}
+
+.accessory-card:hover img {
+    opacity: 0.85;
+}
+
+.accessory-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.accessory-card p {
+    font-size: 12px;
+    color: var(--grey);
+    margin-top: 5px;
+}
+
+/* ==============================
+   PERFUME SECTION
+================================ */
+
+.perfume-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #f7f5f2;
+}
+
+.perfume-image {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.perfume-image img {
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+}
+
+.perfume-content {
+    padding: 60px 10%;
+}
+
+.perfume-content h2 {
+    font-size: clamp(25px, 3vw, 39px);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.perfume-content > p:not(.eyebrow) {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+/* ==============================
+   FLAGSHIP STORES
+================================ */
+
+.stores-section {
+    padding: 80px 5%;
+    background: #fafafa;
+}
+
+.stores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px 18px;
+}
+
+.store-card {
+    background: var(--white);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.store-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--light-grey);
+    margin-bottom: 18px;
+}
+
+.store-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.store-card p {
+    color: var(--grey);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.store-card a {
+    font-size: 10px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 3px;
+}
+
+/* ==============================
+   SERVICES
+================================ */
+
+.services-section {
+    padding: 75px 5%;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    padding: 20px 15px;
+}
+
+.service-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--grey);
+    font-size: 12px;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+.footer {
+    background: #111111;
+    color: var(--white);
+    padding: 55px 5% 0;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 35px;
+    padding-bottom: 45px;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    max-width: 270px;
+    color: #bbbbbb;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.footer-column h3 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #c6c6c6;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.footer-stores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 25px 0;
+    border-top: 1px solid #393939;
+    border-bottom: 1px solid #393939;
+}
+
+.footer-stores h4 {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+.footer-stores p {
+    color: #bbbbbb;
+    font-size: 11px;
+}
+
+.footer-bottom {
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #bbbbbb;
+    font-size: 10px;
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+/* ==============================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 18px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .stores-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .perfume-content {
+        padding: 40px 7%;
+    }
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .announcement-bar {
+        font-size: 9px;
+        min-height: 28px;
+    }
+
+    .header {
+        height: 65px;
+        padding: 0 16px;
+    }
+
+    .logo {
+        font-size: 29px;
+        letter-spacing: 4px;
+    }
+
+    .header-left {
+        gap: 8px;
+    }
+
+    .header-left a {
+        display: none;
+    }
+
+    .menu-button {
+        font-size: 22px;
+    }
+
+    .header-right {
+        gap: 12px;
+    }
+
+    .header-right a {
+        font-size: 19px;
+    }
+
+    .navigation {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding: 13px 16px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 490px;
+        height: 70vh;
+        padding: 45px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content > p:not(.hero-subtitle) {
+        font-size: 12px;
+    }
+
+    .shop-button,
+    .outline-button {
+        min-height: 42px;
+        padding: 12px 17px;
+        font-size: 9px;
+    }
+
+    .collection-section {
+        padding: 50px 15px;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .section-heading > p:not(.eyebrow) {
+        font-size: 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 12px;
+        margin-bottom: 30px;
+    }
+
+    .product-card h3 {
+        font-size: 11px;
+    }
+
+    .product-card .price {
+        font-size: 11px;
+    }
+
+    .image-banner {
+        min-height: 390px;
+        padding: 40px 15px;
+    }
+
+    .banner-content h2 {
+        font-size: 31px;
+    }
+
+    .banner-content p:not(.eyebrow) {
+        font-size: 12px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .feature-card,
+    .feature-card img {
+        min-height: 300px;
+    }
+
+    .feature-content {
+        left: 18px;
+        bottom: 20px;
+    }
+
+    .feature-content h2 {
+        font-size: 23px;
+    }
+
+    .accessory-grid {
+        gap: 12px;
+    }
+
+    .accessory-card h3 {
+        font-size: 13px;
+    }
+
+    .accessory-card p {
+        font-size: 11px;
+    }
+
+    .perfume-section {
+        grid-template-columns: 1fr;
+    }
+
+    .perfume-image,
+    .perfume-image img {
+        min-height: 330px;
+        max-height: 430px;
+    }
+
+    .perfume-content {
+        padding: 35px 22px 45px;
+    }
+
+    .perfume-content h2 {
+        font-size: 28px;
+    }
+
+    .stores-section {
+        padding: 50px 15px;
+    }
+
+    .stores-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px 10px;
+    }
+
+    .store-card {
+        padding-bottom: 15px;
+    }
+
+    .store-card img {
+        margin-bottom: 12px;
+    }
+
+    .store-card h3 {
+        font-size: 12px;
+    }
+
+    .store-card p {
+        font-size: 10px;
+    }
+
+    .services-section {
+        padding: 50px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 15px 10px;
+    }
+
+    .footer {
+        padding: 40px 20px 0;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-stores {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+        gap: 8px;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+
+    .logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .product-card h3 {
+        font-size: 10px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}

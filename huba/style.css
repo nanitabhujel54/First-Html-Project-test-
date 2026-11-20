@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    background-color: aliceblue;
+}
+
+nav .nav-links{
+    display: flex;
+    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    display: flex;
+    gap:20px;
+
+}
+
+.background-img{
+    background-image: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.class{
+    height: auto;
+    width:8px;
+    border-radius: 2px solid black; 
+}

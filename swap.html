@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let a = 5;
+let b = 10;
+console.log("Before swapping: a =", a, ", b =", b);
+let temp = a;
+a = b;
+b = temp;
+console.log("After swapping: a =", a, ", b =", b);
+
+</script>
+
+<script>
+let username = "Admin";
+let password = "@admin123";
+
+let userInput = prompt("Enter your username:");
+let passInput = prompt("Enter your password:");
+
+if (userInput === username && passInput === password) {
+    alert("Login successful!");
+} else {
+    alert("Invalid credentials.");
+}
+</script>
+
+
+<script>
+let totalAmount = Number(prompt("Enter total shopping amount:"));
+
+let discount = 0;
+let finalamount = totalAmount;
+
+if (totalAmount >= 10000) {
+    discount = totalAmount * (20 / 100);
+    finalamount = totalAmount - discount;
+}
+else if (totalAmount >= 5000) {
+    discount = totalAmount * (10 / 100);
+    finalamount = totalAmount - discount;
+}
+else {
+    discount = 0;
+    finalamount = totalAmount;
+}
+
+console.log("Original Amount:", totalAmount);
+console.log("Discount Amount:", discount);
+console.log("Final Amount:", finalamount);
+
+</script>
+
+
+
+<script>
+    let even = 0
+    let odd = 0
+
+    for( i = 1; i<=100; i++){
+        console.log(i)  
+        
+    if (i % 2 === 0){
+        even += 1;
+    }
+    else{
+       odd += 1;
+       
+    }    
+    }
+
+    console.log("Even number:", even);
+    console.log("Odd number:" , odd);
+    
+
+</script>
+
+</body>
+</html>
